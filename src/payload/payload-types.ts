@@ -472,7 +472,7 @@ export interface Settings {
   updatedAt?: string | null
   createdAt?: string | null
 }
-export interface Header {
+export interface HeaderProps {
   id: string
   navItems?:
     | {
