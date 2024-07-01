@@ -12,7 +12,6 @@ export default function HeaderComponent({ header }: { header: HeaderProps }) {
           <Image src={LogoBlack} width={124} height={124} alt="logo" />
         </Link>
       </Gutter>
-      <div className='text-6xl font-bold'>tailwind kos kos</div>
     </nav>
   )
 }
