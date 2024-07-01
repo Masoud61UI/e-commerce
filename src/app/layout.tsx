@@ -10,7 +10,7 @@ import { InitTheme } from './_providers/Theme/InitTheme'
 import { mergeOpenGraph } from './_utilities/mergeOpenGraph'
 
 import './_css/app.scss'
-import "./globals.css";
+import './globals.css'
 
 const outfit = Outfit({
   subsets: ['latin'],
