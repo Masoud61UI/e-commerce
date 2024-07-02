@@ -46,8 +46,11 @@ const LoginForm: React.FC = () => {
   )
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
-      <Message error={error} className={classes.message} />
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="w-full mb-5 flex flex-col gap-7 mt-8 items-start"
+    >
+      <Message error={error} className="mb-5" />
       <Input
         name="email"
         label="Email Address"
@@ -69,7 +72,7 @@ const LoginForm: React.FC = () => {
         appearance="primary"
         label={isLoading ? 'Processing' : 'Login'}
         disabled={isLoading}
-        className='w-full py-3 hover:opacity-85 transition duration-180 ease-out hover:ease-in'
+        className="w-full py-3 hover:opacity-85 transition duration-180 ease-out hover:ease-in"
       />
       <div className="flex items-center justify-between w-full">
         <Link

@@ -74,8 +74,11 @@ const CreateAccountForm: React.FC = () => {
   )
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
-      <Message error={error} className={classes.message} />
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="w-full mb-5 flex flex-col gap-7 mt-8 items-start"
+    >
+      <Message error={error} className="mb-5" />
       <Input
         name="name"
         label="Full name"
