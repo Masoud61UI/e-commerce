@@ -24,7 +24,7 @@ export default async function Login() {
       </Link>
     </div>
 
-    <div className={classes.formWrapper}>
+    <div className='flex flex-col justify-start items-center h-full w-full md:justify-center p-4'>
       <div className={classes.formContainer}>
         <RenderParams className={classes.params} />
 

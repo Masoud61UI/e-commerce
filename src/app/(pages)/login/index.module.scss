@@ -14,18 +14,6 @@
   }
 }
 
-.formTitle {
-
-  h3 {
-    margin: 0;
-
-    @include mid-break {
-      font-size: 34px;
-      margin-bottom: 8px;
-    }
-  }
-}
-
 .heroImg {
   height: 100%;
   width: 100%;
@@ -37,20 +25,6 @@
   @include mid-break {
     display: flex;
     justify-content: center;
-  }
-}
-
-.formWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-
-  @include mid-break {
-    justify-content: flex-start;
-    padding: 10px;
   }
 }
 
