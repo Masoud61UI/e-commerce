@@ -8,6 +8,8 @@ import { mergeOpenGraph } from '../../_utilities/mergeOpenGraph'
 import LoginForm from './LoginForm'
 
 import classes from './index.module.scss'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default async function Login() {
   await getMeUser({
@@ -15,11 +17,28 @@ export default async function Login() {
   })
 
   return (
-    <Gutter className={classes.login}>
-      <RenderParams className={classes.params} />
-      <h1>Log in</h1>
-      <LoginForm />
-    </Gutter>
+    <section className={classes.login}>
+    <div className={classes.heroImg}>
+      <Link href="/" className='flex w-fit'>
+        <h3 className='z-10 m-10 md:m-[40px] text-2xl font-bold p-2 bg-white rounded-md'><span className='text-violet-500'>MB</span> eShop</h3>
+      </Link>
+    </div>
+
+    <div className={classes.formWrapper}>
+      <div className={classes.formContainer}>
+        <RenderParams className={classes.params} />
+
+        <div className='flex items-center gap-4 w-full'>
+          <h3 className='text-2xl font-semibold'>Welcome</h3>
+          <Image src="/assets/icons/hand.png" alt="hand" width={30} height={30} />
+        </div>
+
+        <p className='text-sm text-gray-500 mt-3'>Unlock a world of possibilities by logging into your account!</p>
+
+        <LoginForm />
+      </div>
+    </div>
+  </section>
   )
 }
 

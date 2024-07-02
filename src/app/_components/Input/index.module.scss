@@ -7,19 +7,20 @@
 .input {
   width: 100%;
   font-family: system-ui;
-  border-radius: 0;
+  border-radius: 8px;
   box-shadow: none;
-  border: none;
+  border: 1px solid  rgb(148 163 184);
   background: none;
-  background-color: var(--theme-elevation-100);
+  background-color: rgb(238 242 255);
   color: var(--theme-elevation-1000);
-  height: calc(var(--base) * 2);
+  height: 50px;
   line-height: calc(var(--base) * 2);
-  padding: 0 calc(var(--base) / 2);
-  font-size: inherit;
+  padding: 16px;
+  font-size: 15px;
+  font-weight: 500;
 
   &:focus {
-    border: none;
+    border: 1px solid rgb(79 70 229);
     outline: none;
   }
 
@@ -27,7 +28,7 @@
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus {
     -webkit-text-fill-color: var(--theme-text);
-    -webkit-box-shadow: 0 0 0px 1000px var(--theme-elevation-150) inset;
+    -webkit-box-shadow: 0 0 0px 1000px rgb(238 242 255) inset;
     transition: background-color 5000s ease-in-out 0s;
   }
 }
@@ -51,6 +52,9 @@
   display: block;
   line-height: 1;
   margin-bottom: calc(var(--base) / 2);
+  font-size: 15px;
+  font-weight: 500;
+  color: #3a3a3a;
 }
 
 .errorMessage {
