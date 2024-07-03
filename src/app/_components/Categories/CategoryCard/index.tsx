@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import classes from './index.module.scss'
 import { Category, Media } from '../../../../payload/payload-types'
 import { useFilter } from '../../../_providers/Filter'
 
@@ -16,11 +15,13 @@ export default function CategoryCard({ category }: CategoryCardProps) {
   return (
     <Link
       href={'/products'}
-      className={classes.card}
+      className="relative bg-gray-100 min-h-[360px] w-full flex justify-center items-end p-5 cursor-pointer bg-cover bg-center bg-no-repeat rounded-xl"
       style={{ backgroundImage: `url(${media.url})` }}
       onClick={() => setCategoryFilters([category.id])}
     >
-      <h3 className={classes.title}>{category.title}</h3>
+      <h3 className="rounded-lg p-2.5 w-full text-center bg-white text-violet-600">
+        {category.title}
+      </h3>
     </Link>
   )
 }

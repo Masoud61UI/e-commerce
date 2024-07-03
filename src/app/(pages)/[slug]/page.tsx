@@ -3,7 +3,8 @@ import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 
-import { Category, Page } from '../../../payload/payload-types'
+import { Category } from '../../../payload/payload-types'
+import type { Page } from '../../../payload/payload-types'
 import { staticHome } from '../../../payload/seed/home-static'
 import { fetchDoc } from '../../_api/fetchDoc'
 import { fetchDocs } from '../../_api/fetchDocs'
@@ -20,8 +21,8 @@ import { Gutter } from '../../_components/Gutter'
 // If you are not using Payload Cloud then this line can be removed, see `../../../README.md#cache`
 export const dynamic = 'force-dynamic'
 
-import classes from './index.module.scss';
 import Categories from '../../_components/Categories'
+import Promotion from '../../_components/Promotion'
 
 export default async function Page({ params: { slug = 'home' } }) {
   const { isEnabled: isDraftMode } = draftMode()
@@ -63,9 +64,9 @@ export default async function Page({ params: { slug = 'home' } }) {
         <section>
           <Hero {...hero} />
 
-          <Gutter className='flex flex-col gap-16 md:gap-24 mt-28'>
+          <Gutter className="flex flex-col gap-16 md:gap-24 mt-28">
             <Categories categories={categories} />
-            <Promotion/>
+            <Promotion />
           </Gutter>
         </section>
       ) : (

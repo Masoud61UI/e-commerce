@@ -19,7 +19,9 @@ export default function HeaderComponent({ header }: { header: HeaderProps }) {
         .join(' ')}
     >
       <Gutter className="flex items-center justify-between flex-wrap gap-2 space-x-2">
-        <Link href={'/'} className='text-2xl font-bold'><span className='text-violet-500'>MB</span> eShop</Link>
+        <Link href={'/'} className="text-2xl font-bold">
+          <span className="text-violet-500">MB</span> eShop
+        </Link>
 
         <HeaderNav header={header} />
       </Gutter>
