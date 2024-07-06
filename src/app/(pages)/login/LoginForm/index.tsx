@@ -10,8 +10,6 @@ import { Input } from '../../../_components/Input'
 import { Message } from '../../../_components/Message'
 import { useAuth } from '../../../_providers/Auth'
 
-import classes from './index.module.scss'
-
 type FormData = {
   email: string
   password: string
