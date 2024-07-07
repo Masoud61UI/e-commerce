@@ -22,7 +22,7 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
   }
 
   return (
-    <label className={classes.radioWrapper}>
+    <label className="flex items-center gap-2.5 whitespace-nowrap cursor-pointer text-sm">
       <input
         type="radio"
         checked={isSelected}

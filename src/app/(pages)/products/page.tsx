@@ -5,7 +5,6 @@ import { Blocks } from '../../_components/Blocks'
 import { Gutter } from '../../_components/Gutter'
 import Filters from './Filters'
 
-import classes from './index.module.scss'
 import { fetchDocs } from '../../_api/fetchDocs'
 import { HR } from '../../_components/HR'
 
@@ -28,8 +27,8 @@ export default async function Products() {
   }
 
   return (
-    <div className={classes.container}>
-      <Gutter className={classes.products}>
+    <div className='w-full'>
+      <Gutter className='grid grid-cols-1 gap-16 lg:gap-10'>
         <Filters categories={categories} />
         <Blocks blocks={page?.layout} disableTopPadding={true} />
       </Gutter>

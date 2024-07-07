@@ -18,7 +18,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({ label, value, isSelected, on
   }
 
   return (
-    <label className={classes.checkboxWrapper}>
+    <label className="flex items-center gap-2.5 whitespace-nowrap cursor-pointer text-sm">
       <input
         type="checkbox"
         checked={isChecked}
