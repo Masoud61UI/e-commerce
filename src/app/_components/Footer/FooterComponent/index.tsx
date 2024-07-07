@@ -16,7 +16,7 @@ export default function FooterComponent({ footer }: { footer: FooterProps }) {
   return (
     <footer className={noHeaderFooterUrls.includes(pathname) ? 'hidden' : ''}>
       <Gutter>
-        <ul className="grid justify-center gap-6 p-0 md:grid-cols-2 sm:gap-4 sm:margin-y-6 lg:grid-cols-1">
+        <ul className="grid justify-center gap-6 p-0 md:grid-cols-2 my-5 lg:grid-cols-4">
           {inclusions.map(inclusion => (
             <li key={inclusion.title}>
               <Image
@@ -26,8 +26,8 @@ export default function FooterComponent({ footer }: { footer: FooterProps }) {
                 height={36}
                 className="mb-4"
               />
-              <h5>{inclusion.title}</h5>
-              <p>{inclusion.description}</p>
+              <h5 className="text-base 2xl:text-lg font-semibold">{inclusion.title}</h5>
+              <p className="text-sm text-gray-500">{inclusion.description}</p>
             </li>
           ))}
         </ul>
